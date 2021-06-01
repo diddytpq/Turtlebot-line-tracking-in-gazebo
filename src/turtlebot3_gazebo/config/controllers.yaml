@@ -1,0 +1,13 @@
+#'wheel_left_joint', 'wheel_right_joint'
+turtlebot_controller:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 1000
+  
+  #Velocity Controllers ---------------------------------------
+  wheel_L:
+    type: velocity_controllers/JointVelocityController
+    joint: wheel_left_joint
+  wheel_R:
+    type: velocity_controllers/JointVelocityController
+    joint: wheel_right_joint
